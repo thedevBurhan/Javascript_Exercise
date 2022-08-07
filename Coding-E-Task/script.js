@@ -102,6 +102,50 @@ function notOfOperators() {
 }
 notOfOperators();
 
+var max = (2, 5, 7, 8, 10);
+console.log(Math.max(max));
+console.log(Math.min(max));
 
+var num = 7.8;
+console.log(Math.round(num));
+console.log(Math.floor(num));
+console.log(Math.ceil(num));
 
+var str1 = "Basith";
+var name1 = str1.slice(1);
+console.log(name1);
+var name2 = str1.slice(2, 4);
+console.log(name2);
+// A string is converted to upper case with toUpperCase():
+// A string is converted to lower case with toLowerCase():
 
+var name2 = str1.charAt(2); // The charAt() method returns the character at a given position in a string
+console.log(name2);
+
+var str1 = "      hello world  ";
+var name1 = str1.trim(); //The trim() method removes whitespace from both sides of a string:
+console.log(name1);
+
+// A string can be converted to an array with the split() method
+var car = "hello";
+var num = car.split("");
+console.log(num);
+for (i = 0; i < num.length; i++) {
+  if (num[i] === "e") {
+    console.log(num[i]);
+  } else if (num[i] === "o") {
+    console.log(num[i]);
+  }
+}
+
+var person = {
+  firstName: "burhan",
+  lastName: "Mohammed",
+  age: 25,
+  height: 5.7,
+};
+console.log(person.lastName + "  " + person.age);
+
+var d = new Date();
+console.log(d);
+console.log(d.getMonth);
