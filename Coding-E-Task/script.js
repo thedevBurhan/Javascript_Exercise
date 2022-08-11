@@ -149,3 +149,26 @@ console.log(person.lastName + "  " + person.age);
 var d = new Date();
 console.log(d);
 console.log(d.getMonth);
+
+// sort() in ascending order
+
+var fruit = ["Grape", "Apple", "orange", "Banana"];
+var arrange = fruit.sort();
+console.log(arrange);
+console.log(arrange[1]);
+
+// reverse() in descending order
+var arran = fruit.reverse();
+console.log(arran);
+
+var ascending = [9, 8, 7, 5, 6, 2, 4];
+console.log(ascending.sort());
+
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function (a, b) {
+  return a - b;
+});
+console.log(points);
+console.log(points[0]);
+
+
