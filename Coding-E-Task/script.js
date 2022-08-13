@@ -52,12 +52,12 @@ var filelist = [
   "file5.pdf",
   "file6.png",
 ];
-var extension = ".docx";
-function findFiles(files, extensionString) {
+var extension1 = ".docx";
+function findFiles(a, b) {
   //arugement
-  var result = files.filter(function (file) {
+  var result = a.filter(function (file) {
     //console.log(result);
-    return file.endsWith(extensionString);
+    return file.endsWith(b);
   });
   return result;
 }
@@ -85,24 +85,13 @@ var largeFilelist = [
   "file6.exe",
 ];
 var extensionStr = ".exe";
+var extension = ".png";
 var resultResponse = findFiles(largeFilelist, extensionStr);
-var resultResponses = findFiles(filelist, extensionStr); //parameter
+var resultResponses = findFiles(filelist, extension1); //parameter
+var resultResponse1 = findFiles(filelist, extension);
 console.log(resultResponse);
 console.log(resultResponses);
-
-var filelist = [
-  "file1.pdf",
-  "file2.docx",
-  "file3.mp3",
-  "file4.docx",
-  "file5.pdf",
-  "file6.png",
-];
-var extension = ".png";
-
-var result = filelist.filter((file) => file.endsWith(extension));
-
-console.log(result);
+console.log(resultResponse1);
 
 // task:5
 
@@ -181,11 +170,12 @@ console.log(person.lastName + "-" + person.age);
 
 var d = new Date();
 console.log(d);
-console.log(d.getMonth);
+var month = d.getDay();
+console.log(month);
 
 // sort() in ascending order convert to array
 
-var fruit = ["Grape", "Apple", "orange", "Banana"];
+var fruit = ["Grape", "apple", "orange", "Banana"];
 var arrange = fruit.sort();
 console.log(arrange);
 console.log(arrange[1]);
