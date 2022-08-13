@@ -33,12 +33,15 @@ function printArrOfNames(arr) {
 printArrOfNames(array);
 
 // task:3
-
-for (i = 2; i < 50; i++) {
-  if (i % 2 == 0) {
-    console.log(`${i} is an even number`);
+function printEvenNumbersWithInLimit(endNumber) {
+  for (i = 2; i < endNumber; i++) {
+    if (i % 2 == 0) {
+      console.log(`${i} is an even number`);
+    }
   }
 }
+
+printEvenNumbersWithInLimit(50);
 // task:4
 
 var filelist = [
@@ -50,12 +53,42 @@ var filelist = [
   "file6.png",
 ];
 var extension = ".docx";
+function findFiles(files, extensionString) {
+  //arugement
+  var result = files.filter(function (file) {
+    //console.log(result);
+    return file.endsWith(extensionString);
+  });
+  return result;
+}
 
-var result = filelist.filter(function (file) {
-  return file.endsWith(extension);
-});
+var number1 = 50;
 
-console.log(result);
+var largeFilelist = [
+  "file1.pdf",
+  "file2.docx",
+  "file3.mp3",
+  "file4.docx",
+  "file5.pdf",
+  "file6.png",
+  "file1.pdf",
+  "file2.docx",
+  "file3.mp3",
+  "file4.docx",
+  "file5.pdf",
+  "file6.png",
+  "file1.pdf",
+  "file2.docx",
+  "file3.mp3",
+  "file4.docx",
+  "file5.exe",
+  "file6.exe",
+];
+var extensionStr = ".exe";
+var resultResponse = findFiles(largeFilelist, extensionStr);
+var resultResponses = findFiles(filelist, extensionStr); //parameter
+console.log(resultResponse);
+console.log(resultResponses);
 
 var filelist = [
   "file1.pdf",
@@ -67,9 +100,7 @@ var filelist = [
 ];
 var extension = ".png";
 
-var result = filelist.filter(function (file) {
-  return file.endsWith(extension);
-});
+var result = filelist.filter((file) => file.endsWith(extension));
 
 console.log(result);
 
@@ -135,6 +166,8 @@ for (i = 0; i < num.length; i++) {
     console.log(num[i]);
   } else if (num[i] === "o") {
     console.log(num[i]);
+  } else {
+    // console.log(num[i]);
   }
 }
 
@@ -144,31 +177,39 @@ var person = {
   age: 25,
   height: 5.7,
 };
-console.log(person.lastName + "  " + person.age);
+console.log(person.lastName + "-" + person.age);
 
 var d = new Date();
 console.log(d);
 console.log(d.getMonth);
 
-// sort() in ascending order
+// sort() in ascending order convert to array
 
 var fruit = ["Grape", "Apple", "orange", "Banana"];
 var arrange = fruit.sort();
 console.log(arrange);
 console.log(arrange[1]);
 
-// reverse() in descending order
+// reverse() in descending order  convert to array
 var arran = fruit.reverse();
 console.log(arran);
+console.log(arran[1]);
 
 var ascending = [9, 8, 7, 5, 6, 2, 4];
-console.log(ascending.sort());
+var numAscending = ascending.sort();
+console.log(numAscending);
 
 const points = [40, 100, 1, 5, 25, 10];
 points.sort(function (a, b) {
-  return a - b;
+  if (a < b) {
+    return -1;
+  }
 });
 console.log(points);
 console.log(points[0]);
 
+var arrange = fruit.join(""); //join() it will join the value in the array it an num,string..
+console.log(arrange);
 
+var joinAscending = ascending.join("-");
+console.log(joinAscending);
