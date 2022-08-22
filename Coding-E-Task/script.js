@@ -55,9 +55,9 @@ var filelist = [
 var extension1 = ".docx";
 function findFiles(a, b) {
   //arugement
-  var result = a.filter(function (file) {
+  var result = a.filter(function (files) {
     //console.log(result);
-    return file.endsWith(b);
+    return files.endsWith(b);
   });
   return result;
 }
@@ -166,7 +166,7 @@ var person = {
   age: 25,
   height: 5.7,
 };
-console.log(person.lastName + "-" + person.age);
+console.log(person.lastName + "-" + person["age"]);
 
 var d = new Date();
 console.log(d);
@@ -203,3 +203,49 @@ console.log(arrange);
 
 var joinAscending = ascending.join("-");
 console.log(joinAscending);
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const filter = arr.filter((a) => a > 5);
+console.log(filter);
+
+// how to write own filter
+let items = [1, 2, 3, 4, 5];
+let isEven = function (item) {
+  return item % 2 === 0;
+};
+console.log(isEven);
+const result = [];
+
+for (let i = 0; i < items.length; i++) {
+  if (isEven(items[i])) {
+    result.push(items[i]);
+  }
+}
+
+console.log(result);
+// Result: [2, 4]
+
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "Indian";
+  this.fullname = function () {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+console.log(
+  myFather.fullname() +
+    " is Handsome. " +
+    myMother.firstName +
+    " is beautiful. " +
+    "They are " +
+    myFather.nationality
+);
