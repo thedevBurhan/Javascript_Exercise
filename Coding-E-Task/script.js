@@ -38,6 +38,9 @@ function printEvenNumbersWithInLimit(endNumber) {
     if (i % 2 == 0) {
       console.log(`${i} is an even number`);
     }
+    // else {
+    //   console.log(`${i} is an odd number`);
+    // }
   }
 }
 
@@ -210,7 +213,7 @@ const filter = arr.filter((a) => a > 5);
 console.log(filter);
 
 // how to write own filter
-let items = [1, 2, 3, 4, 5];
+let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let isEven = function (item) {
   return item % 2 === 0;
 };
@@ -224,7 +227,7 @@ for (let i = 0; i < items.length; i++) {
 }
 
 console.log(result);
-// Result: [2, 4]
+// Result: [2, 4, 6, 8, 10]
 
 // Constructor function for Person objects
 function Person(first, last, age, eye) {
@@ -240,12 +243,42 @@ function Person(first, last, age, eye) {
 
 const myFather = new Person("John", "Doe", 50, "blue");
 const myMother = new Person("Sally", "Rally", 48, "green");
+const myBro = new Person("Alen", "Taylor", 25, "Brown");
 
 console.log(
   myFather.fullname() +
     " is Handsome. " +
     myMother.firstName +
     " is beautiful. " +
+    myBro.firstName +
+    " is good boy " +
+    "they are middle class family." +
     "They are " +
     myFather.nationality
 );
+
+var greeting = "hello";
+function splitstr(greeting) {
+  var iterategreeting = greeting.split("");
+  for (i = 0; i < iterategreeting.length; i++) {
+    if (iterategreeting[i] === "e") {
+      console.log(iterategreeting[i] + " find the charcter");
+    } else {
+      console.log(iterategreeting[i]);
+    }
+  }
+}
+splitstr(greeting);
+
+var filterNumber = [90, 800, 77, 6, 5, 4, 3, 2, 1];
+var results = filterNumber.filter(function (a) {
+  return a % 2 == 0 && a > 89;
+});
+console.log(results);
+
+var res = filterNumber.sort((a, b) => {
+  if (a < b) {
+    return -1;
+  }
+});
+console.log(res[0]);
