@@ -271,14 +271,16 @@ function splitstr(greeting) {
 splitstr(greeting);
 
 var filterNumber = [90, 800, 77, 6, 5, 4, 3, 2, 1];
-var results = filterNumber.filter(function (a) {
-  return a % 2 == 0 && a > 89;
-});
+var results = filterNumber
+  .filter((a) => a % 2 == 0 && a > 89)
+  .reduce((a, b) => a + b);
 console.log(results);
 
-var res = filterNumber.sort((a, b) => {
-  if (a < b) {
-    return -1;
-  }
-});
-console.log(res[0]);
+var res = filterNumber
+  .sort((a, b) => {
+    if (a < b) {
+      return -1;
+    }
+  })
+  .map((a, b) => a + b);
+console.log(res);
