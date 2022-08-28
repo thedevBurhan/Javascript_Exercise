@@ -117,13 +117,13 @@ iterateStr(str);
 
 // Accessing array
 
-function notOfOperators() {
-  let a = 0;
-  if (!a) {
-    alert("Hi Burhan");
-  }
-}
-notOfOperators();
+// function notOfOperators() {
+//   let a = 0;
+//   if (!a) {
+//     alert("Hi Burhan");
+//   }
+// }
+// notOfOperators();
 
 var max = (2, 5, 7, 8, 10);
 console.log(Math.max(max));
@@ -207,10 +207,32 @@ console.log(arrange);
 var joinAscending = ascending.join("-");
 console.log(joinAscending);
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const filter = arr.filter((a) => a > 5);
-console.log(filter);
+const filteredNumbers = numbers.filter(function (value, index, myArray) {
+  return value > 5;
+});
+
+console.log(filteredNumbers);
+
+const filteredNumbers1 = numbers.myFilter(function (value, index, myArray) {
+  return value > 5;
+});
+
+console.log(filteredNumbers1);
+
+// function MyArray() {}
+// MyArray.filter = function() {};
+// var myArr = new MyArray();
+// myArr.filter((a) => a > 5);
+
+// var finalresult = [];
+const result1 = myFilter(function (value, index, numbers) {
+  return value > 5;
+}, numbers);
+
+// OutPut [ 6, 7, 8, 9 ]
+console.log(result1);
 
 // how to write own filter
 let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -237,13 +259,20 @@ function Person(first, last, age, eye) {
   this.eyeColor = eye;
   this.nationality = "Indian";
   this.fullname = function () {
+    console.log(this.age);
     return this.firstName + " " + this.lastName;
+  };
+  this.printWifeName = function () {
+    console.log(this.WifeName);
   };
 }
 
+this.color = "red";
 const myFather = new Person("John", "Doe", 50, "blue");
 const myMother = new Person("Sally", "Rally", 48, "green");
 const myBro = new Person("Alen", "Taylor", 25, "Brown");
+
+myFather.WifeName = "Kulli";
 
 console.log(
   myFather.fullname() +
@@ -254,8 +283,23 @@ console.log(
     " is good boy " +
     "they are middle class family." +
     "They are " +
-    myFather.nationality
+    myFather.printWifeName()
 );
+
+function Employee(first, last, id, mobileNumber) {
+  this.firstName = first;
+  this.lastName = last;
+  this.id = id;
+  this.mobileNumber = mobileNumber;
+  this.fullname = function () {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+var burhanEmpoloyee = new Employee("burhan", "Sahid", "121", 01400310310);
+var burhaariEmpoloyee = new Employee("Buhari", "Sahid", "121", 2132212);
+
+Employee.prototype.company = "Aglisis";
 
 var greeting = "hello";
 function splitstr(greeting) {
@@ -276,11 +320,10 @@ var results = filterNumber
   .reduce((a, b) => a + b);
 console.log(results);
 
-var res = filterNumber
-  .sort((a, b) => {
-    if (a < b) {
-      return -1;
-    }
-  })
-  .map((a, b) => a + b);
+var res = filterNumber.sort((a, b) => {
+  if (a < b) {
+    return -1;
+  }
+});
+// .map((a, b) => a - b);
 console.log(res);
