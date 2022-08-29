@@ -49,20 +49,7 @@ printEvenNumbersWithInLimit(50);
 
 var number = [1, 2, 3, 4, 5];
 
-let str = "welcome";
-function iterateStr(str) {
-  let splitedStr = str.split(""); // ARRAY SPLIT METHOD
-  for (let j = 0; j < splitedStr.length; j++) {
-    if (splitedStr[j] === "e") {
-      console.log(splitedStr[j]);
-    } else if (splitedStr[j] == "c") {
-      console.log(splitedStr[j]);
-    } else if (splitedStr[j] === "m") {
-      console.log(splitedStr[j]);
-    }
-  }
-}
-iterateStr(str);
+
 
 // Accessing array
 
@@ -99,18 +86,7 @@ var name1 = str1.trim(); //The trim() method removes whitespace from both sides 
 console.log(name1);
 
 // A string can be converted to an array with the split() method
-var car = "hello";
-var num = car.split("");
-console.log(num);
-for (i = 0; i < num.length; i++) {
-  if (num[i] === "e") {
-    console.log(num[i]);
-  } else if (num[i] === "o") {
-    console.log(num[i]);
-  } else {
-    // console.log(num[i]);
-  }
-}
+
 
 var person = {
   firstName: "burhan",
@@ -179,71 +155,6 @@ console.log(joinAscending);
 
 // console.log(filteredNumbers1);
 
-
-
-
-// Constructor function for Person objects
-function Person(first, last, age, eye) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.eyeColor = eye;
-  this.nationality = "Indian";
-  this.fullname = function () {
-    console.log(this.age);
-    return this.firstName + " " + this.lastName;
-  };
-  this.printWifeName = function () {
-    console.log(this.WifeName);
-  };
-}
-
-this.color = "red";
-const myFather = new Person("John", "Doe", 50, "blue");
-const myMother = new Person("Sally", "Rally", 48, "green");
-const myBro = new Person("Alen", "Taylor", 25, "Brown");
-
-myFather.WifeName = "Kulli";
-
-console.log(
-  myFather.fullname() +
-    " is Handsome. " +
-    myMother.firstName +
-    " is beautiful. " +
-    myBro.firstName +
-    " is good boy " +
-    "they are middle class family." +
-    "They are " +
-    myFather.printWifeName()
-);
-
-function Employee(first, last, id, mobileNumber) {
-  this.firstName = first;
-  this.lastName = last;
-  this.id = id;
-  this.mobileNumber = mobileNumber;
-  this.fullname = function () {
-    return this.firstName + " " + this.lastName;
-  };
-}
-
-var burhanEmpoloyee = new Employee("burhan", "Sahid", "121", 01400310310);
-var burhaariEmpoloyee = new Employee("Buhari", "Sahid", "121", 2132212);
-
-Employee.prototype.company = "Aglisis";
-
-var greeting = "hello";
-function splitstr(greeting) {
-  var iterategreeting = greeting.split("");
-  for (i = 0; i < iterategreeting.length; i++) {
-    if (iterategreeting[i] === "e") {
-      console.log(iterategreeting[i] + " find the charcter");
-    } else {
-      console.log(iterategreeting[i]);
-    }
-  }
-}
-splitstr(greeting);
 
 var filterNumber = [90, 800, 77, 6, 5, 4, 3, 2, 1];
 var results = filterNumber
