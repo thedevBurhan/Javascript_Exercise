@@ -1,4 +1,5 @@
 /**
+ * Find the maximun item in the array of Numbers.
  * @param [Numbers] 
  * @return Number that is maximum
  * 
