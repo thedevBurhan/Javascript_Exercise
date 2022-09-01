@@ -46,10 +46,6 @@ console.log(resultResponse);
 console.log(resultResponses);
 console.log(resultResponse1);
 
-
-
-
-
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 function myFilter(cb, array) {
   var finalresult = [];
@@ -74,20 +70,18 @@ function myFilter1(cb, array) {
 }
 
 const result1 = myFilter(function (value, index, numbers) {
-    return value > 5;
-  }, numbers);
-  
-  // OutPut [ 6, 7, 8, 9 ]
-  console.log(result1);
-  
-  const result2 = myFilter1(function (value, index, numbers) {
-    return value < 5;
-  }, numbers);
-  console.log(result2);
+  return value > 5;
+}, numbers);
 
+// OutPut [ 6, 7, 8, 9 ]
+console.log(result1);
 
+const result2 = myFilter1(function (value, index, numbers) {
+  return value < 5;
+}, numbers);
+console.log(result2);
 
-  // how to write own filter
+// how to write own filter
 let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let isEven = function (item) {
   return item % 2 === 0;

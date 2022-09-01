@@ -45,9 +45,6 @@ function printEvenNumbersWithInLimit(endNumber) {
 }
 
 printEvenNumbersWithInLimit(50);
-// task:5
-
-var number = [1, 2, 3, 4, 5];
 
 
 
@@ -123,6 +120,11 @@ points.sort(function (a, b) {
     return -1;
   }
 });
+
+for(i=0;i<points.length;i++){
+  if(a.points[i]<b.points[i])
+  return -1;
+}
 console.log(points);
 console.log(points[0]);
 
