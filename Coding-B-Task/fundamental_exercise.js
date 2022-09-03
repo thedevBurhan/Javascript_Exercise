@@ -99,7 +99,7 @@ multiplybyninth(90);
 function reverseanumber(a) {
   var reverse = a.split("");
   var reverses = reverse.reverse();
-  console.log(`The given number is reverse ${reverses}`);
+  console.log(`The given number in reverse order ${reverses}`);
 }
 // var revnumber = "123456789";
 reverseanumber("123456789");
@@ -115,7 +115,10 @@ const arry = [
   "mango",
 ];
 
-const toFindDuplicates = (arry) =>
-  arry.filter((a, b) => arry.indexOf(a) !== b);
-const duplicateElements = toFindDuplicates(arry);
+function toFindDuplicates(a) {
+  return a.filter(function (a, b) {
+    return arry.indexOf(a) == b;
+  });
+}
+var duplicateElements = toFindDuplicates(arry);
 console.log(duplicateElements);
