@@ -33,29 +33,29 @@
 
 // type:3
 
-var Numbers = [1, 2, 101, 45, 55, 1443];
-var l = Numbers.length;
-var max = -Infinity;
-for (i = 0; l > i; i++) {
-  if (Numbers[i] > max) {
-    max = Numbers[i];
-  }
-}
+// var Numbers = [1, 2, 101, 45, 55, 1443];
+// var l = Numbers.length;
+// var max = -Infinity;
+// for (i = 0; l > i; i++) {
+//   if (Numbers[i] > max) {
+//     max = Numbers[i];
+//   }
+// }
 
-console.log(max);
+// console.log(max);
 
-// type :5
-var array = [3, 6, 2, 1025, 56, 32, 5, 89, 32];
-function findMax(array) {
-  var largest = 0;
-  for (i = 0; i <= largest; i++) {
-    if (array[i] > largest) {
-      var largest = array[i];
-    }
-  }
-  return largest;
-}
-var result = findMax(array);
-console.log(result);
+// // type :5
+// var array = [3, 6, 2, 1025, 56, 32, 5, 89, 32];
+// function findMax(array) {
+//   var largest = 0;
+//   for (i = 0; i <= largest; i++) {
+//     if (array[i] > largest) {
+//       var largest = array[i];
+//     }
+//   }
+//   return largest;
+// }
+// var result = findMax(array);
+// console.log(result);
 
 // type:6
