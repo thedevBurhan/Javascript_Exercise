@@ -25,9 +25,9 @@ console.log(age);
 // type:3
 
 let arr = ["Bill", "Russel", "John", "Tom", "Eduard", "Alien", "Till"];
-Array.prototype.myFind = function (callback) {
+Array.prototype.myFind = function (a) {
   for (let i = 0; i < arr.length; i++) {
-    callback(arr[i], i, arr);
+    a(arr[i], i, arr);
   }
 };
 arr.myFind((element, index, array) => {

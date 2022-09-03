@@ -5,7 +5,7 @@ class Employee {
     this.phonenumber = phonenumber;
   }
   getEmpName() {
-    return this.name;
+    return this.name + " " + this.id;
   }
   getEmpId() {
     return this.id;
@@ -25,6 +25,6 @@ Emp3.empDetails("Buhari", 3, 987654321);
 console.log(Emp1.getEmpName());
 console.log(Emp2.getEmpName());
 console.log(Emp3.getEmpName());
-console.log(Emp1.getEmpId());
-console.log(Emp2.getEmpId());
-console.log(Emp3.getEmpId());
+console.log(Emp1.getEmpPhonenumber());
+console.log(Emp2.getEmpPhonenumber());
+console.log(Emp3.getEmpPhonenumber());
