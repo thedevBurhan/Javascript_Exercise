@@ -17,8 +17,8 @@ const Employee = [
 ];
 const age = Employee.find(findAlan).Empage;
 
-function findAlan(a) {
-  return a.Empname == "Alan";
+function findAlan(Employee) {
+  return Employee.Empname == "Alan";
 }
 console.log(age);
 
