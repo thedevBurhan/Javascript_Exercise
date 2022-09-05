@@ -18,15 +18,22 @@ var string = "MOHAMMEDBURHAN";
 function findOccerence(str) {
   var splitedStr = str.split("");
   var emptyObject = {};
+  var largest = 0;
   for (i = 0; i < splitedStr.length; i++) {
-    var value = splitedStr[i];
-    if (!emptyObject[value]) {
-      emptyObject[value] = 1;
-    } else if (emptyObject[value]) {
-      emptyObject[value] += 1;
+    var key = splitedStr[i];
+    if (!emptyObject[key]) {
+      emptyObject[key] = 1;
+    } else if (emptyObject[key]) {
+      emptyObject[key] += 1;
+    }
+  } 
+  var values =Object.values(emptyObject);
+  for (i = 0; i <= largest; i++) {
+    if (values[i] > largest) {
+      var largest = values[i];
     }
   }
-  return emptyObject; //{M: 3, O: 1, H: 2, A: 2, E: 1, D:1, B:1, U:1, R:1, N:1}
+  return largest; //{M: 3, O: 1, H: 2, A: 2, E: 1, D:1, B:1, U:1, R:1, N:1}
 }
 
 console.log(findOccerence(string));
@@ -54,3 +61,10 @@ console.log(findOccerence(string));
 // }
 
 // console.log(dog)
+
+
+// console.log(colour);
+// let colour="red";
+
+// let/const   Cannot access 'colour' before initialization
+// var   undefined
