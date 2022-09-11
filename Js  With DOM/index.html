@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="mystyle.css" />
     <title>DOM Task-1</title>
-   
   </head>
   <body>
     <div class="wrap">
-        <h1>Number: <input type="number" id="myNumber" placeholder="Type a number"></h1>
-        <button onclick="myIncrease()">Increase</button>
-        <button onclick="myDecrease()">Decrease</button>
+      <h1>
+        Number:
+        <p id="myNumber">0</p>
+      </h1>
+      <button onclick="myIncrease()">Increase</button>
+      <button onclick="myDecrease()">Decrease</button>
     </div>
     <script>
-        function myIncrease() {
-          document.getElementById("myNumber").stepUp(1);
-        }
-        function myDecrease() {
-          document.getElementById("myNumber").stepDown(1);
-        }
-        </script>
+      function myIncrease() {
+        var value = document.getElementById("myNumber").innerText;
+        document.getElementById("myNumber").innerText ;
+        console.log(value);
+      }
+      function myDecrease() {
+        document.getElementById("myNumber").stepDown(1);
+      }
+    </script>
   </body>
 </html>

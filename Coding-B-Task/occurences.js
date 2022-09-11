@@ -16,7 +16,7 @@
 
 var string = "MOHAMMEDBURHAN";
 function findOccerence(str) {
-  var splitedStr = str.split("");
+  var splitedStr = str.split(""); 
   var emptyObject = {};
   var largest = 0;
   for (i = 0; i < splitedStr.length; i++) {
@@ -30,7 +30,7 @@ function findOccerence(str) {
   var values =Object.values(emptyObject);
   for (i = 0; i <= largest; i++) {
     if (values[i] > largest) {
-      var largest = values[i];
+      largest = values[i];
     }
   }
   return largest; //{M: 3, O: 1, H: 2, A: 2, E: 1, D:1, B:1, U:1, R:1, N:1}

@@ -43,8 +43,7 @@ function Employee(first, last, id, mobileNumber) {
 }
 
 var burhanEmpoloyee = new Employee("burhan", "Sahid", "121", 01400310310);
-var burhaariEmpoloyee = new Employee("Buhari", "Sahid", "121", 2132212);
-
+var burhaariEmpoloyee = new Employee("Buhari", "Sahid", "121", 2132212)
 Employee.prototype.company = "Aglisis";
 
 console.log(
@@ -54,3 +53,4 @@ console.log(
     " is beautiful. " +
     burhanEmpoloyee.company
 );
+;

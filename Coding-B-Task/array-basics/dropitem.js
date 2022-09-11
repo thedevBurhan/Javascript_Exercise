@@ -10,13 +10,13 @@
  */
 
 // type:1
-var number = [1, 2, 3, 4, 5, 6];
-function elementToDrop(number, elementToDrop) {
+var numbers = [1, 2, 3, 4, 5, 6];
+function elementToDrop(numbers, elementToDrop) {
   var remainingNums = [];
-  for (i = elementToDrop; i < number.length; i++) {
-    remainingNums.push(number[i]);
+  for (i = elementToDrop; i < numbers.length; i++) {
+    remainingNums.push(numbers[i]);
   }
   return remainingNums;
 }
-console.log(elementToDrop(number, 2));
-console.log(elementToDrop(number , 4))
+console.log(elementToDrop(numbers, 2));
+console.log(elementToDrop(numbers , 4))

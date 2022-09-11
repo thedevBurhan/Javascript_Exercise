@@ -1,4 +1,7 @@
 class Employee {
+  organizationName = "";
+  organizationDetails = "";
+
   empDetails(name, id, phonenumber) {
     this.name = name;
     this.id = id;
@@ -28,3 +31,22 @@ console.log(Emp3.getEmpName());
 console.log(Emp1.getEmpPhonenumber());
 console.log(Emp2.getEmpPhonenumber());
 console.log(Emp3.getEmpPhonenumber());
+
+function debitAccount(
+  fromUserAccountNumber,
+  cardNumber,
+  amount,
+  toAccountNumber
+) {
+  var userAccountDetail;
+  var cardInfordInfo;
+
+  this.isCardValid = () => {
+    return cardInfordInfo.valididity;
+  };
+}
+
+x = 5;
+
+console.log(x);
+var x;

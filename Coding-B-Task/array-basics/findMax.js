@@ -44,12 +44,13 @@ for (i = 0; l > i; i++) {
 // console.log(max);
 
 // // type :5
-var array = [30, 60, 20, 56,  32, 89, 32, 2, 300,1];
+var array = [1, 60, 20, 56, 32, 89, 32, 2, 300, 0];
+
 function findMax(array) {
-  var largest = 0;
-  for (i = 0; i <= largest; i++) {
+  var largest = array[0];
+  for (i = 1; i < array.length; i++) {
     if (array[i] > largest) {
-      var largest = array[i];
+      largest = array[i];
     }
   }
   return largest;
@@ -59,10 +60,10 @@ console.log(result);
 
 // type:6 find min
 function findMini(array) {
-  var largest = 500;
-  for (i = 0; i <= largest; i++) {
+  var largest = array[0];
+  for (i = 1; i <= array.length; i++) {
     if (array[i] < largest) {
-      var largest = array[i];
+      largest = array[i];
     }
   }
   return largest;
