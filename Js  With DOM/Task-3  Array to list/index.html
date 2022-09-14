@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array to List</title>
+  </head>
+  <body>
+    <div style="margin-top:10rem ;margin-left:42rem;">
+        <h1>Lists of Cars</h1>
+      <div id="car"></div>
+    </div>
+    <script>
+      var cars = [
+        "BMW",
+        "Audi",
+        "Bentley",
+        "Chevrolet",
+        "Ferrari",
+        "Ford",
+        "Honda",
+        "Hyundai",
+        "Jaguar",
+        "Lamborghini",
+        " Land Rover",
+      ];
+
+      function createUL(array) {
+        // Create the list element:
+        var list = document.createElement("ul");
+
+        for (var i = 0; i < array.length; i++) {
+          // Create the list item:
+          var item = document.createElement("li");
+
+          // Set its contents:
+          item.appendChild(document.createTextNode(array[i]));
+        //   appendChild()  adds a node to the end of the list of children of a specified parent node
+        //   The createTextNode() method is used to create a TextNode which contains element node and a text node
+
+          // Add it to the list:
+          list.appendChild(item);
+        }
+
+        // Finally, return the constructed list:
+        return list;
+      }
+
+      // Add the contents of cars to #car:
+      document.getElementById("car").appendChild(createUL(cars));
+    </script>
+  </body>
+</html>
