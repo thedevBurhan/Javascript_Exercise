@@ -7,7 +7,7 @@
     <title>DOM TASk</title>
   </head>
   <body>
-  <!------------------------------------------------------------------------------------------------------------------------- -->
+    <!------------------------------------------------------------------------------------------------------------------------- -->
     <!-- Task -2 Random Color -->
     <!-- <div style="margin-top: 25rem; margin-left: 40rem">
       <div class="box"></div>
@@ -30,7 +30,7 @@
       // The querySelectorAll() method returns all elements that matches a CSS selector(s)
       var button = document.querySelector("button");
       // querySelector() The Document method querySelector() returns the first Element
-      //  within the document that matches the specified selector, 
+      //  within the document that matches the specified selector,
       // or group of selectors. If no matches are found, null is returned.
       button.addEventListener("click", function () {
         for (i = 0; i < colors.length; i++) {
@@ -40,56 +40,56 @@
           box[i].style.height = "5rem";
         }
       });
-    </script>
-<-------------------------------------------------------------------------------------------------------------------------- -->
-<!-- Task-3 Array to List -->
+    </script> -->
+    <!-------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Task-3 Array to List -->
 
-<!-- <div style="margin-top:10rem ;margin-left:42rem;">
-  <h1>Lists of Cars</h1>
-<div id="car"></div>
-</div>
-<script>
-var cars = [
-  "BMW",
-  "Audi",
-  "Bentley",
-  "Chevrolet",
-  "Ferrari",
-  "Ford",
-  "Honda",
-  "Hyundai",
-  "Jaguar",
-  "Lamborghini",
-  " Land Rover",
-];
+    <!-- <div style="margin-top: 10rem; margin-left: 42rem">
+      <h1>Lists of Cars</h1>
+      <div id="car"></div>
+    </div>
+    <script>
+      var cars = [
+        "BMW",
+        "Audi",
+        "Bentley",
+        "Chevrolet",
+        "Ferrari",
+        "Ford",
+        "Honda",
+        "Hyundai",
+        "Jaguar",
+        "Lamborghini",
+        " Land Rover",
+      ];
 
-function createUL(array) {
-  // Create the list element:
-  var list = document.createElement("ul");
+      function createUL(array) {
+        // Create the list element:
+        var list = document.createElement("ul");
 
-  for (var i = 0; i < array.length; i++) {
-    // Create the list item:
-    var item = document.createElement("li");
+        for (var i = 0; i < array.length; i++) {
+          // Create the list item:
+          var item = document.createElement("li");
 
-    // Set its contents:
-    item.appendChild(document.createTextNode(array[i]));
-  //   appendChild()  adds a node to the end of the list of children of a specified parent node
-  //   The createTextNode() method is used to create a TextNode which contains element node and a text node
+          // Set its contents:
+          item.appendChild(document.createTextNode(array[i]));
+          //   appendChild()  adds a node to the end of the list of children of a specified parent node
+          //   The createTextNode() method is used to create a TextNode which contains element node and a text node
 
-    // Add it to the list:
-    list.appendChild(item);
-  }
+          // Add it to the list:
+          list.appendChild(item);
+        }
 
-  // Finally, return the constructed list:
-  return list;
-}
+        // Finally, return the constructed list:
+        return list;
+      }
 
-// Add the contents of cars to #car:
-document.getElementById("car").appendChild(createUL(cars));
-</script> -->
+      // Add the contents of cars to #car:
+      document.getElementById("car").appendChild(createUL(cars));
+    </script> -->
 
-<!----------------------------------------------------------------------------------------------------------------------------->
-<!-- Task-4 Change word by mouseover -->
+    <!----------------------------------------------------------------------------------------------------------------------------->
+    <!-- Task-4 Change word by mouseover -->
     <!-- <div style="margin-top: 10rem; margin-left: 42rem">
       <h1 id="changeText" onmouseover="mouseOver()" onmouseout="mouseOut()">
         Hover here
@@ -107,9 +107,9 @@ document.getElementById("car").appendChild(createUL(cars));
       }
     </script> -->
 
-<!----------------------------------------------------------------------------------------------------------------------------->
-<!-- Task -5 List count -->
-<div style="margin-left:40rem ;">
+    <!----------------------------------------------------------------------------------------------------------------------------->
+    <!-- Task -5 List count -->
+    <div style="margin-left:40rem ;">
   <ul>
     <li>Coffee</li>
     <li>Tea</li>
@@ -131,6 +131,5 @@ document.getElementById("car").appendChild(createUL(cars));
      document.getElementById("count").innerHTML = elements.length
      document.getElementById("count").style.color="blue"});
     </script>
-
   </body>
 </html>
