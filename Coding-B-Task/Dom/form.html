@@ -5,28 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body style="background-color: whitesmoke">
-    <div
-      style="
-        margin-top: 10rem;
-        margin-left: 40rem;
-        background-color: white;
-        width: 15rem;
-        height: 20rem;
-        border-radius: 5px;
-        box-shadow: 1px 1px 5px 5px rgb(165, 159, 159);
-        padding: 10px;
-      "
-    >
+  <body>
+    <div class="wrap">
+      <h1>Form</h1>
       <form>
-        <label>Name:</label>&nbsp&nbsp&nbsp
+        <label class="label">Name:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <input type="text" placeholder="Type your full name" /><br /><br />
-        <label>Age:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <label class="label">Age:</label
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <input type="number" placeholder="Enter your age" /><br /><br />
-        <label>Address:</label>
+        <label class="label">Address:</label>&nbsp&nbsp&nbsp
         <input type="text" /><br /><br />
+        <label class="label">Maritial Status:</label>&nbsp&nbsp
+        <input type="checkbox" />Yes <input type="checkbox" />No<br /><br />
+        <label class="label">Cast vote:</label>&nbsp&nbsp
+        <input type="radio" />Yes <input type="radio" />No<br /><br />
       </form>
+      <button>cancel</button><button>save</button>
     </div>
   </body>
 </html>
