@@ -1,36 +1,91 @@
+* {
+ box-sizing:border-box;
+}
 body {
-  background-color: rgb(255, 255, 255);
+
+  background-color: #f9fafb ;
+  font-family: 'OpenSans',sans - serif ;
+  display : flex ;
+  align-items : center ;
+  justify-content : center ;
+  min-height : 100vh ;
 }
-.wrap {
-  margin-top: 10rem;
-  margin-left: 38rem;
-  background-color: white;
-  width: 23rem;
-  height: 23rem;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px 5px rgb(165, 159, 159);
+.container {
+  background-color : #fff ;
+  border-radius : 5px ;
+  box-shadow :2px 2px 2px 2px gray ;
+  width : 400px ;
+}
+
+h2{
+  text-align: center;
+}
+.form{
+  padding: 30px 40px;
+}
+ .form-control{
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  position: relative;
+ }
+ .form-control label{
+  color:#777 ;
+  display: block;
+  margin-bottom: 5px;
+ }                  
+ .form-control input{
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
   padding: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+ }    
+.form-control input:focus{
+  outline: 0;
+  border-color: #777;
+}                 
+.form-control.success input{
+  border-color: #2ecc2e;
 }
-h1 {
-  text-align: center;
+.form-control.error input{
+  border-color: #e74c3e;
 }
-.label {
-  margin-left:3rem;
+.form-control-checkbox label{
+  color:#777 ;
+  display: block;
+  margin-bottom: 10px;
+ }   
+.form-control-checkbox input{
+ display: inline;
+ padding: 10px;
+ font-size: 14px;
+ border: 2px solid #f0f0f0;
+ border-radius: 4px;
+ margin-top: 8px;
 }
-.input {
-  margin-left: 3rem;
-}
-button{
-    background-color: #979a97;
-  border: none;
+.form-control-radio label{
+  color:#777 ;
+  display: block;
+  margin-top: 10px;
+
+ }   
+.form-control-radio input{
+  display: inline;
+ padding: 10px;
+ font-size: 14px;
+ border: 2px solid #f0f0f0;
+ border-radius: 4px;
+ margin-top: 8px;
+ }
+.button{
+  display: flex;
+  justify-content:space-evenly;
+  padding: 4px;
+  margin-top: 10px;
+  width: 100%;
+  /* margin-left: 55px; */
+  border-radius: 4px;
+  font-size: medium;
   color: white;
-  padding: 5px 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 5rem;
-  cursor: pointer;
-  border-radius: 3px;
 }
