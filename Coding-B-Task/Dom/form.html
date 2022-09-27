@@ -8,22 +8,40 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrap">
-      <h1>Form</h1>
-      <form>
-        <label class="label">Name:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <input type="text" placeholder="Type your full name" /><br /><br />
-        <label class="label">Age:</label
-        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <input type="number" placeholder="Enter your age" /><br /><br />
-        <label class="label">Address:</label>&nbsp&nbsp&nbsp
-        <input type="text" /><br /><br />
-        <label class="label">Maritial Status:</label>&nbsp&nbsp
-        <input type="checkbox" />Yes <input type="checkbox" />No<br /><br />
-        <label class="label">Cast vote:</label>&nbsp&nbsp
-        <input type="radio" />Yes <input type="radio" />No<br /><br />
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Login Form</h2>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Name">
+          <!-- <small>Error Message</small>  -->
+        </div>
+        <div class="form-control">
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="Your Age">
+          <!-- <small>Error Message</small>  -->
+        </div>
+        <div class="form-control">
+          <label for="address">Address</label>
+          <input type="text" id="address" placeholder="Address">
+          <!-- <small>Error Message</small>  -->
+        </div>
+        <div class="form-control-checkbox">
+          <label for="martialstatus">Martial Status</label>
+          <input type="checkbox" id="martialstatus"> Married
+          <input type="checkbox" id="martialstatus"> Unmarried
+        </div>
+        <div class="form-control-radio">
+          <label for="castvote">Cast Vote</label>
+          <input type="radio" id="castvote"> Yes
+          <input type="radio" id="castvote"> No
+        </div>
+        <div class="button">
+        <button>Cancel</button>
+         <button>Save</button>
+        </div>
       </form>
-      <button>cancel</button><button>save</button>
+      
     </div>
   </body>
 </html>
