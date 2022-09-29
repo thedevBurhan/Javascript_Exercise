@@ -51,6 +51,15 @@ h2{
 .form-control.error input{
   border-color: #e74c3e;
 }
+.form-control small{
+  position: absolute;
+  bottom: 2;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.error small{
+  visibility: visible;
+}
 .form-control-checkbox label{
   color:#777 ;
   display: block;
