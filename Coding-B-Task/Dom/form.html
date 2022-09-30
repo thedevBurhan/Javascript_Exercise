@@ -27,14 +27,16 @@
           <small>Error Message</small> 
         </div>
         <div class="form-control-checkbox">
-          <label for="martialstatus">Martial Status</label>
-          <input type="checkbox" id="martialstatus"> Married
-          <input type="checkbox" id="martialstatus"> Unmarried
+          <label for="martialstatus">Martial Status<span> *</span></label>
+          <input type="checkbox" class="martialstatus" value="1" onclick="checkedOnClick(this);"> Married
+          <input type="checkbox" class="martialstatus" value="2" onclick="checkedOnClick(this);"> Unmarried
+          <small>Error Message</small>  
         </div>
         <div class="form-control-radio">
-          <label for="castvote">Cast Vote</label>
-          <input type="radio" id="castvote"> Yes
-          <input type="radio" id="castvote"> No
+          <label for="castvote">Cast Vote<span> *</span></label>
+          <input type="radio" class="castvote" value="1" onclick="radioOnClick(this);"> Yes
+          <input type="radio" class="castvote" value="2" onclick="radioOnClick(this);"> No
+          <small>Error Message</small> 
         </div>
         <div class="button">
         <button>Cancel</button>

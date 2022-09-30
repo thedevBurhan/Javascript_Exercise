@@ -2,8 +2,7 @@ const form=document.getElementById("form");
 const username=document.getElementById("username");
 const age=document.getElementById("age");
 const address=document.getElementById("address");
-const martialstatus=document.getElementById("martialstatus");
-const castvote=document.getElementById("castvote");
+
 
 // show input error
 
@@ -18,7 +17,22 @@ function showSuccess(input){
     const formControl =input.parentElement;
     formControl.className = 'form-control success';
 }
-
+// check box
+function checkedOnClick(a){
+    var checkboxesList=document.getElementsByClassName("martialstatus");
+    for (var i=0;i<checkboxesList.length;i++){
+        checkboxesList.item(i).checked=false;
+    }
+    a.checked=true;
+}
+// radio button check
+function radioOnClick(a){
+    var radioboxesList=document.getElementsByClassName("castvote");
+    for (var i=0;i<radioboxesList.length;i++){
+        radioboxesList.item(i).checked=false;
+    }
+    a.checked=true;
+}
 // event Listeners
 form.addEventListener('submit',function(a){
     a.preventDefault();
@@ -46,9 +60,7 @@ form.addEventListener('submit',function(a){
     else {
         showSuccess(address);
     }
-//  
-      
- 
+
 
 })
  
