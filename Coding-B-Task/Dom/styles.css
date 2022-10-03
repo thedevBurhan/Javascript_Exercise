@@ -60,6 +60,19 @@ h2{
 .form-control.error small{
   visibility: visible;
 }
+.form-control input:focus{
+  outline: 0;
+  border-color: #777;
+}                 
+.form-control-checkbox small{
+  position: absolute;
+  bottom: 2;
+  left: 0;
+  visibility: hidden;
+}
+.form-control-checkbox.error small{
+  visibility: visible;
+}
 .form-control-checkbox label{
   color:#777 ;
   display: block;
@@ -75,6 +88,15 @@ h2{
 }
 .form-control-checkbox span{
   color: #e74c3e;
+}
+.form-control-radio small{
+  position: absolute;
+  bottom: 2;
+  left: 0;
+  visibility: hidden;
+}
+.form-control-radio.error small{
+  visibility: visible;
 }
 .form-control-radio label{
   color:#777 ;

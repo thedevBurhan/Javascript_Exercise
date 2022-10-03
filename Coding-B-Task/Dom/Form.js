@@ -2,7 +2,8 @@ const form=document.getElementById("form");
 const username=document.getElementById("username");
 const age=document.getElementById("age");
 const address=document.getElementById("address");
-
+const martialstatus=document.getElementsByClassName("martialstatus");
+const castvote=document.getElementById("castvote");
 
 // show input error
 
@@ -18,24 +19,28 @@ function showSuccess(input){
     formControl.className = 'form-control success';
 }
 // check box
-function checkedOnClick(a){
+function checkedOnClick(value){
     var checkboxesList=document.getElementsByClassName("martialstatus");
     for (var i=0;i<checkboxesList.length;i++){
         checkboxesList.item(i).checked=false;
     }
-    a.checked=true;
+    value.checked=true;
 }
 // radio button check
-function radioOnClick(a){
+function radioOnClick(value){
     var radioboxesList=document.getElementsByClassName("castvote");
     for (var i=0;i<radioboxesList.length;i++){
         radioboxesList.item(i).checked=false;
+        
     }
-    a.checked=true;
+    value.checked=true;
 }
 // event Listeners
 form.addEventListener('submit',function(a){
     a.preventDefault();
+    // The preventDefault() method of the Event interface
+    //  tells the user agent that if the event does not get explicitly handled, 
+    // its default action should not be taken as it normally would be
 // username
     if (username.value== ''){
         showError(username,"Username is required");
@@ -55,12 +60,12 @@ form.addEventListener('submit',function(a){
         showSuccess(age);
     }
     if (address.value== ''){
-        showError(address,"address is required");
+        showError(address,"address is optional");
     }
     else {
         showSuccess(address);
     }
-
-
+   
+    
 })
- 
+//  collecting data

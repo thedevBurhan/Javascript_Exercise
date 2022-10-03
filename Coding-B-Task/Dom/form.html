@@ -9,11 +9,11 @@
   </head>
   <body>
     <div class="container">
-      <form id="form" class="form">
+      <form id="form" class="form" >
         <h2>Login Form</h2>
         <div class="form-control">
           <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter Name">
+          <input type="text" id="username"  class="userName" placeholder="Enter Name">
           <small>Error Message</small> 
         </div>
         <div class="form-control">
@@ -30,13 +30,13 @@
           <label for="martialstatus">Martial Status<span> *</span></label>
           <input type="checkbox" class="martialstatus" value="1" onclick="checkedOnClick(this);"> Married
           <input type="checkbox" class="martialstatus" value="2" onclick="checkedOnClick(this);"> Unmarried
-          <small>Error Message</small>  
+          
         </div>
         <div class="form-control-radio">
           <label for="castvote">Cast Vote<span> *</span></label>
           <input type="radio" class="castvote" value="1" onclick="radioOnClick(this);"> Yes
           <input type="radio" class="castvote" value="2" onclick="radioOnClick(this);"> No
-          <small>Error Message</small> 
+  
         </div>
         <div class="button">
         <button>Cancel</button>
