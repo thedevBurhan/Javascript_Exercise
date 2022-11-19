@@ -122,6 +122,8 @@ function toFindDuplicates(a) {
 }
 var duplicateElements = toFindDuplicates(arry);
 console.log(duplicateElements);
+
+// -------------------------------------------------------------------------------------------------------------
 function foo (dupl){
 
   let check;

@@ -1,17 +1,3 @@
-var values =Object.values(employees);
-  var newObject=[];
-  for (i = 0; i <= employees.Length; i++) {
-    if (values[i] == Tester) {
-       newObject.push (values[i]);
-    }
- console.log 
-
-
-
-
-
-
-
 
 
 
@@ -78,6 +64,18 @@ const employees = [
   },
 ];
 
+let findDesignation= employees.filter(function(a){return a.designation === "Tester"});
+// let findBatchNumber= employees.filter(function(a) {return a.batchNumber === "B1"});
+// let findName= employees.filter(function(a) {return a.name === "nikitha"});
+console.log(findDesignation)
+// console.log([...findDesignation,...findBatchNumber,...findName]);
+
+
+
+
+
+// let findTester = employees.filter(emp => emp.batchNumber === "B1");
+// console.log(findTester);
 
 // Tester : [  {
 //     name: "buhari",
