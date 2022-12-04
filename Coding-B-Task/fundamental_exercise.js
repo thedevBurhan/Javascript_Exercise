@@ -26,6 +26,7 @@ function printStringWithNames(str) {
   }
 }
 // printStringWithNames("hello"); 
+printStringWithNames("hello");
 
 // task 3: finding odd numbers
 
