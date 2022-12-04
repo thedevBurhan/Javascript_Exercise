@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+
+    <script>
+
+        var inputString = "a2b5";
+        // output: "aabbbbb"
+        // a
+        // a
+        // b
+        // b
+        // 1 check input char by char
+        // 2 check is char. if char store char
+        // 3 check is number. if number take prevChar and append in result
+        // 4 repeate 2 and 4 till input string ends
+
+        // var y = 0;
+        // var firstChar = inputString[y];
+        // y = y + 1;
+        // var secondChar = inputString[y];
+        // inputString.split("");
+
+        // console.log("firstChar: ", firstChar);
+
+        // console.log("secondChar: ", secondChar);
+
+        function printString(input) {
+            for (let i = 0; i <= input.length; i++) {
+                var tepmChar = input.charAt(i);
+                if (!isNaN(parseInt(tepmChar)) && typeof parseInt(tepmChar) == "number") {
+                    var preCharIndex = i - 1;
+                    var prevChar = input[preCharIndex];
+                    for (let y = 0; y < parseInt(tepmChar); y++) {
+                        console.log(prevChar);
+                    }
+                }
+            }
+        }
+
+        // printString(inputString);
+
+        function printString1(input) {
+            var storage = '';
+            for (let i = 0; i <= input.length; i++) {
+                var tepmChar = input.charAt(i);
+                if (!isNaN(parseInt(tepmChar)) && typeof parseInt(tepmChar) == "number") {
+                    var preCharIndex = i - 1;
+                    var prevChar = input[preCharIndex];
+                    for (let y = 0; y < parseInt(tepmChar); y++) {
+                        storage = storage + prevChar;
+                    }
+                }
+            }
+            console.log(storage);
+        }
+
+        //printString1(inputString);
+
+        var inputString = "aa2bbb5c3";
+        function printString2(input) {
+            var storage = '';
+            var parevChar = '';
+            for (let i = 0; i <= input.length; i++) {
+                var tepmChar = input.charAt(i);
+                if (!isNaN(parseInt(tepmChar)) && typeof parseInt(tepmChar) == "number") {
+                    for (let y = 0; y < parseInt(tepmChar); y++) {
+                        storage = storage + parevChar;
+                    }
+                    parevChar = "";
+                } else {
+                    parevChar = parevChar + tepmChar;
+                }
+            }
+            console.log(storage);
+        }
+
+        //printString2(inputString);
+
+
+        function plusMinus(arr) {
+            // Write your code here
+            var resultMap = {
+                positiveNumbers: [],
+                negativeNumbers: [],
+                zeroNumbers: []
+            };
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == 0) {
+                    resultMap.zeroNumbers.push(arr[i]);
+                } else if (arr[i] < 0) {
+                    resultMap.negativeNumbers.push(arr[i]);
+                } else if (arr[i] > 0) {
+                    resultMap.positiveNumbers.push(arr[i]);
+                }
+            }
+            console.log(parseFloat(resultMap.positiveNumbers.length / arr.length).toFixed(6));
+            console.log(parseFloat(resultMap.negativeNumbers.length / arr.length).toFixed(6));
+            console.log(parseFloat(resultMap.zeroNumbers.length / arr.length).toFixed(6));
+        }
+
+        plusMinus([-4, 3, -9, 0, 4, 1]);
+
+    </script>
+
+</body>
+
+</html>

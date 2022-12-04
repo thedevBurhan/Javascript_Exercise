@@ -50,7 +50,7 @@ function findEvenAndOdd(arrayofNumber) {
     }
   }
 }
-// findEvenAndOdd(num);
+findEvenAndOdd(num);
 
 // task 4: finding even numbers
 
@@ -62,7 +62,7 @@ function findEvenNumber(arrayOfNumbers) {
   }
 }
 
-var numb = [20, 19, 15, 16, 8, 4, 6, 9];
+var numb = [20, 19, 15, 16, 8, 4, 6, 9, 10];
 findEvenNumber(numb);
 
 // task 5: multiply of 9
@@ -75,7 +75,7 @@ function CheckMultiplyByNine(ninth) {
   }
 }
 
-// CheckMultiplyByNine(90);
+CheckMultiplyByNine(90);
 
 //------------------------------------------------------------------
 
