@@ -12,7 +12,7 @@
 
 
     <script>
-
+//   pattern analyse
         var inputString = "a2b5";
         // output: "aabbbbb"
         // a
@@ -85,8 +85,9 @@
         }
 
         //printString2(inputString);
+// ------------------------------------------------------------------------------------------------------------------------------
 
-
+// Plus Minus
         function plusMinus(arr) {
             // Write your code here
             var resultMap = {
@@ -108,7 +109,44 @@
             console.log(parseFloat(resultMap.zeroNumbers.length / arr.length).toFixed(6));
         }
 
-        plusMinus([-4, 3, -9, 0, 4, 1]);
+        // plusMinus([-4, 3, -9, 0, 4, 1]);
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+// Sum of find max and min
+
+     var arr = [1, 2, 3, 4, 5];
+        function miniMaxSum(array) {
+            const sum = arr.reduce((a, b) => a + b);
+            const min = sum - Math.max(...array);
+            const max = sum - Math.min(...array);
+            console.log(`${min} ${max}`);
+        }
+        // miniMaxSum(arr);
+// -------------------------------------------------------------------------------------------------------------------------------------
+
+// Lonely Integer
+
+var num=[1,2,3,4,3,2,1,5];
+let lonely = num.filter((item,index)=> num.indexOf(item) === num.lastIndexOf(item));
+console.log(lonely);
+console.log(num.indexOf(2));
+
+
+function lonelyinteger(a,b) {
+    // Write your code here
+  let lonely = a.filter((item,index)=> a.indexOf(item) === b.lastIndexOf(item));
+   console.log(lonelyinteger(num));
+}  
+
+
+
+
+
+
+
+
+
+
 
     </script>
 
