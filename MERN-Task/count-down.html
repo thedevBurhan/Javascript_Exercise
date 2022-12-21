@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form-DOM</title>
+<!-- <script src="../DOM day1/script.js"></script> -->
+<!-- <link rel="stylesheet" href="../DOM day1/style.css"> -->
+
+</head>
+ <body style="background-color: hwb(0 85% 15%);">
+
+<p id="demo"></p>  
+<button onclick="printNumberEachOneSecond(10)">click me </button>  
+  <script>
+    function printNumberEachOneSecond(number) {
+    
+
+    if(number > 0 ){
+        setTimeout(() => {
+            printNumberEachOneSecond(number - 1)}, 2000)
+            console.log(number);
+            document.getElementById("demo").innerHTML = ` ${number}  `;
+    }
+    if (number == 0){
+        document.getElementById("demo").innerHTML = "happy birthday"
+         console.log(number);
+    };
+   
+}
+;
+  </script>
+
+</body>
+
+</html>
+

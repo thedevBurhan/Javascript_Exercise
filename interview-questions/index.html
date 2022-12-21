@@ -73,6 +73,7 @@
             for (let i = 0; i <= input.length; i++) {
                 var tepmChar = input.charAt(i);
                 if (!isNaN(parseInt(tepmChar)) && typeof parseInt(tepmChar) == "number") {
+                    // parseInt() is a JavaScript function that parses a string and returns an integer
                     for (let y = 0; y < parseInt(tepmChar); y++) {
                         storage = storage + parevChar;
                     }
@@ -138,8 +139,13 @@ function lonelyinteger(a,b) {
    console.log(lonelyinteger(num));
 }  
 
-
-
+const id =setTimeout(()=>{
+    console.log("burhan");
+},3000);
+ clearTimeout(id);
+// setInterval(()=>{
+//     console.log("burhan");
+// },3000);
 
 
 
