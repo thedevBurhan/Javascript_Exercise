@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form-DOM</title>
-<!-- <script src="../DOM day1/script.js"></script> -->
-<!-- <link rel="stylesheet" href="../DOM day1/style.css"> -->
+  <title>Set-timeout</title>
+  <!-- <script src="../DOM day1/script.js"></script> -->
+  <!-- <link rel="stylesheet" href="../DOM day1/style.css"> -->
 
 </head>
- <body style="background-color: hwb(0 85% 15%);">
 
-<p id="demo"></p>  
-<button onclick="printNumberEachOneSecond(10)">click me </button>  
+<body style="background-color: hwb(0 85% 15%); padding: 25%; padding-left: 45rem;">
+
+  <p id="display"  style="font-size: larger;"></p>
+  <!-- <button onclick="printNumberEachOneSecond(10)">click me </button> -->
   <script>
     function printNumberEachOneSecond(number) {
-    
 
-    if(number > 0 ){
+
+      if (number > 0) {
         setTimeout(() => {
-            printNumberEachOneSecond(number - 1)}, 2000)
-            console.log(number);
-            document.getElementById("demo").innerHTML = ` ${number}  `;
-    }
-    if (number == 0){
+          printNumberEachOneSecond(number - 1)
+        }, 2000)
+        console.log(number);
+        document.getElementById("demo").innerHTML = ` ${number}  `;
+      }
+      if (number == 0) {
         document.getElementById("demo").innerHTML = "happy birthday"
-         console.log(number);
-    };
-   
-}
-;
+        console.log(number);
+      };
+
+    }
+    ;
+    let timer = 10;
+
+    const time = document.getElementById('display');
+
+    setTimeout(() => {
+      time.innerHTML = timer;
+
+      setTimeout(() => {
+        time.innerHTML = timer--;
+
+        setTimeout(() => {
+          time.innerHTML = timer--;
+          setTimeout(() => {
+            time.innerHTML = timer--;
+            setTimeout(() => {
+              time.innerHTML = timer--;
+              setTimeout(() => {
+                time.innerHTML = timer--;
+                setTimeout(() => {
+                  time.innerHTML = timer--;
+                  setTimeout(() => {
+                    time.innerHTML = timer--;
+                    setTimeout(() => {
+                      time.innerHTML = timer--;
+                      setTimeout(() => {
+                        time.innerHTML = timer--;
+                        setTimeout(() => {
+                          time.style.color = "blue";
+                          time.innerHTML = 'Happy Indepence Day';
+
+                        }, 1000);
+                      }, 1000);
+                    }, 1000);
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    }, 1000);
   </script>
 
 </body>
 
 </html>
-
