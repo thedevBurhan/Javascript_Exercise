@@ -14,6 +14,7 @@
 <body style="background-color: hwb(0 85% 15%); padding: 25%; padding-left: 45rem;">
 
   <p id="display"  style="font-size: larger;"></p>
+  <h1 id="demo" > </h1>
   <!-- <button onclick="printNumberEachOneSecond(10)">click me </button> -->
   <script>
     function printNumberEachOneSecond(number) {
@@ -36,7 +37,7 @@
     let timer = 10;
 
     const time = document.getElementById('display');
-
+    
     setTimeout(() => {
       time.innerHTML = timer;
 
@@ -74,6 +75,20 @@
         }, 1000);
       }, 1000);
     }, 1000);
+
+
+    
+ setInterval(TheTime, 1000)
+ function TheTime(){
+  const date= new Date;
+  document.getElementById("demo").innerText=date.toLocaleTimeString();
+ }
+
+
+ setInterval(Name,2000)
+ function Name(){
+  console.log("Mohammed Burhan");
+ }
   </script>
 
 </body>
