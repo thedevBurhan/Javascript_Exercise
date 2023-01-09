@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock-api</title>
+</head>
+
+<body>
+    <h1 style="font-size: larger;font-weight: 300;">Mock API</h1>
+    <button type="button" onclick="loadDoc()">Request Get data</button>
+    <button type="button" onclick="loadDocs()">Request Post data</button>
+    <p id="demo"></p>
+    <script>
+        // var request = new XMLHttpRequest();
+        // //XMLHttpRequest (XHR) objects are used to interact with servers.
+        // // You can retrieve data from a URL without having to do a full page refresh. 
+        // //This enables a Web page to update just part of a page without disrupting what the user is doing
+
+        function loadDoc() {
+            const request = new XMLHttpRequest();
+            request.open("GET", 'https://jsonplaceholder.typicode.com/posts', true);
+            request.send();
+            request.onload = function () {
+                var data = JSON.parse(request.response)
+                for (var i = 0; i < data.length; i++) {
+                    document.getElementById("demo").innerHTML = data.find(finddata);
+                    function finddata(data) {
+                        return data.id > 3;
+                    }
+                }
+                var gettingData = data;
+                console.log(gettingData.filter((data) => {
+                    return data.userId == 3;
+                })
+                )
+
+            }
+        }
+    </script>
+</body>
+
+</html>
