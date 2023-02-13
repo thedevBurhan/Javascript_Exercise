@@ -85,7 +85,7 @@
             console.log(storage);
         }
 
-        //printString2(inputString);
+        printString2(inputString);
 // ------------------------------------------------------------------------------------------------------------------------------
 
 // Plus Minus
@@ -147,13 +147,53 @@ const id =setTimeout(()=>{
 //     console.log("burhan");
 // },3000);
 
+// ----------------------------------------------------------------------------------------------------------------------------------
 
+//guvi- assessment 
+// problem-01
+//input = "5 5";
+//output ="even"; 
+// find the different and print the value is even or odd
 
+var input="5 5";
+var sep=input.split(" ").map(Number);
+var diff=sep[0]-sep[1];
+if(diff%2===0){
+    console.log("even");
+}else{
+    console.log("odd");4
+}
 
+ 
+// --------------------------------------------------------------------------------------------------------------------------------------
 
+//input:"guvi geek"
+//output:"ui ee"
+// print vowels in an given string
 
+var input="guvi geek";
+var sep=input.split(" ");
+var val0=sep[0].split("");
+var val1=sep[1].split("");
+var valueOfi="";
+var valueOfj="";
+for (var i=0;i<val0.length;i++){
+   if(val0[i]=="a"||val0[i]=="e"||val0[i]=="i"||val0[i]=="o"||val0[i]=="u") {
+    valueOfi= valueOfi+val0[i];
+}
+}
+for (var j=0;j<val1.length;j++){
+   if(val1[j]=="a"||val1[j]=="e"||val1[j]=="i"||val1[j]=="o"||val1[j]=="u") {
+    valueOfj= valueOfj+val1[j];
+}
+}
+console.log(valueOfi+" "+valueOfj);
 
-
+// ---------------------------------------------------------------------------------------------------------------------------------------
+    
+    
+    
+    
     </script>
 
 </body>
